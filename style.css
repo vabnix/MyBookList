@@ -1,0 +1,18 @@
+html{
+    font-family: 'Thasadith', sans-serif;
+}
+.circular-btn{
+    border-radius: 50%;
+}
+
+.label-text{
+    color:grey;
+}
+
+.header__tag-line{
+    font-style: italic;
+}
+
+.delete{
+    border: 30px;
+}

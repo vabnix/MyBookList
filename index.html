@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/materia/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-5bFGNjwF8onKXzNbIcKR8ABhxicw+SC1sjTh6vhSbIbtVgUuVTm2qBZ4AaHc7Xr9" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    <title>MyBookList | Using Browser localstore</title>
+</head>
+
+<body>
+    <section class="section-header mt-5">
+        <div class="container">
+            <h1 class="display-4"><i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Book</span>List</h1>
+            <p class="header__tag-line">Application to view data from browser localstore</p>
+            <hr>
+        </div>
+    </section>
+
+    <section class="section-add-book">
+        <div class="container">
+            <!--Card Section Start Here-->
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Add Book</h4>
+                    <form id="book-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="title" required>
+                            <label class="label-text" for="title">Title</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="author" required>
+                            <label class="label-text" for="author">Author</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="year" required>
+                                <label class="label-text" for="year">Year</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="isbn" required>
+                                <label class="label-text" for="isbn">#ISBN</label>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <button class="btn btn-outline-primary circular-btn"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--Card Section End Here-->
+        </div>
+    </section>
+    <section class="section-show-books mt-5">
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">ISBN</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="book-list"></tbody>
+            </table>
+        </div>
+    </section>
+    <script src="./app.js"></script>
+</body>
+
+</html>
